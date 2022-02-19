@@ -9,6 +9,7 @@ export default function Text({
   opacity = 1,
   contain = undefined,
   color,
+  style,
   ...p
 }) {
   console.log({ color });
@@ -95,6 +96,7 @@ export default function Text({
       fontWeight: bold ? "700" : props.style.fontWeight,
       textTransform: textTransform || props.style.textTransform,
       color: color || "inherit",
+      ...style,
     };
     // if (size) props.style.fontSize = size;
     // if (textTransform) props.style.textTransform = textTransform;

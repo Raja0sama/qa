@@ -7,16 +7,19 @@ import img3 from "../../assets/img-3.png";
 export function Section1(props) {
   return (
     <section className="flex ">
-      <div className="w-full flex flex-col justify-center">
-        <div className="flex items-center flex-col text-center">
+      <div className="w-full flex flex-col ">
+        <div
+          className="flex items-center flex-col text-center"
+          style={{ marginRight: 41 }}
+        >
           <Tag {...props.theme}>Travel</Tag>
           <Space y={15} />
-          <Text type={"sxl"} contain={499}>
+          <Text type={"sxl"} contain={414}>
             Louvre Abu Dhabi marks 4th anniversary with world class exhibitions,
             programming for all
           </Text>
           <Space y={25} />
-          <Text type={"xl"} contain={499}>
+          <Text type={"xl"} contain={416}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
             in odio vel risus dignissim interdum.
           </Text>
@@ -28,7 +31,7 @@ export function Section1(props) {
         <Space y={24} />
         <img alt="basically no alt to display here." src={img1} />
       </div>
-      <Space x={"8%"} />
+      <Space x={"6.2%"} />
       <div className="w-full flex">
         <div className="w-full">
           <TextSection
