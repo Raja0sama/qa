@@ -1,9 +1,6 @@
-import { MenuIcon, MoonIcon } from "../svgIcon";
+import { MenuIcon, MoonIcon, Space } from "../";
 
-import Space from "../space";
 import logo from "../../assets/logo.svg";
-import menu from "../../assets/menu.svg";
-import moon from "../../assets/moon.svg";
 
 const iconsComponent = [
   (props) => (
@@ -13,7 +10,7 @@ const iconsComponent = [
   ),
   (props) => <span {...props}>MENU</span>,
   (props) => (
-    <div {...props}>
+    <div onClick={props.toggleDark} {...props}>
       <MoonIcon theme={props.theme} />
     </div>
   ),
@@ -21,24 +18,35 @@ const iconsComponent = [
 
 const _menu = ["News", "opinion", "Life", "Business", "magazine", "newsletter"];
 
-function Header({ theme }) {
+function Header({ theme, toggleDark }) {
   return (
     <>
       <div className="header">
         <div className="w-full flex items-center ">
           {iconsComponent.map((Component, index) => {
-            return <Component theme={theme} className="topHeaderIcons" />;
+            return (
+              <Component
+                key={`${index}-header-icon`}
+                toggleDark={toggleDark}
+                theme={theme}
+                className="topHeaderIcons"
+              />
+            );
           })}
         </div>
         <div className="header-item">
-          <img src={logo} />
+          <img alt="basically no alt to display here." src={logo} />
         </div>
         <div className="header-item"></div>
       </div>
       <Space y={48} />
       <div className="menu">
         {_menu.map((item, index) => {
-          return <span className="menu-item"> {item} </span>;
+          return (
+            <span key={`${item}`} className="menu-item">
+              {item}
+            </span>
+          );
         })}
       </div>
       <Space y={30} />

@@ -30,6 +30,43 @@ export function MenuIcon({ theme }) {
     </svg>
   );
 }
+export function StarIcon({ theme }) {
+  console.log(theme);
+  const color = theme !== "dark" ? "#fff" : "#000";
+
+  return (
+    <svg
+      width={14}
+      height={13}
+      viewBox="0 0 14 13"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M7.23753 0.11438L9.28981 4.34874L13.9516 4.99273L10.5588 8.25354L11.3868 12.8857L7.23753 10.6661L3.08766 12.8857L3.91629 8.25354L0.523438 4.99273L5.18526 4.34874L7.23753 0.11438Z"
+        fill={color}
+      />
+    </svg>
+  );
+}
+
+export function PlayIcon({ theme }) {
+  return (
+    <svg
+      width="28"
+      height="39"
+      viewBox="0 0 28 39"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M27.2969 19.9023L0.28125 0.902344V38.9023L27.2969 19.9023Z"
+        fill="white"
+      />
+    </svg>
+  );
+}
+
 export function MoonIcon({ theme }) {
   const color = theme === "dark" ? "#fff" : "#000";
 

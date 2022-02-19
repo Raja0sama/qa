@@ -1,11 +1,13 @@
-import Header from "../header";
+import { Header } from "../";
 
-function Layout({ children, dark }) {
+function Layout({ children, dark, toggleDark }) {
+  console.log({ toggleDark });
+
   const theme = dark ? "dark" : "light";
   return (
     <div className={`layout ${theme}`}>
       <div className="container">
-        <Header theme={theme} />
+        <Header toggleDark={toggleDark} theme={theme} />
         {children}
       </div>
     </div>

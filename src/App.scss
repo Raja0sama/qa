@@ -63,12 +63,36 @@ $marginY: 25px;
   display: flex;
 }
 
+.bg-black {
+  background-color: black;
+}
+.bg-white {
+  background-color: white;
+}
+.color-white {
+  color: white;
+}
+.color-black {
+  color: black;
+}
+
+.rounded {
+  border-radius: 10000px;
+}
+
 .flex-col {
   flex-direction: column;
 }
 
 .justify-center {
   justify-content: center;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-start {
+  justify-content: flex-start;
 }
 
 .justify-between {
@@ -88,6 +112,16 @@ $marginY: 25px;
   color: $dark-text;
   text-transform: uppercase;
 }
+.tag-light-invert {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 14px;
+  background-color: transparent;
+  color: $light-text;
+  border: 1px solid $light-text;
+  text-transform: uppercase;
+}
 .tag-dark {
   text-align: center;
   font-size: 12px;
@@ -95,6 +129,16 @@ $marginY: 25px;
   padding: 5px 14px;
   color: $light-text;
   background-color: $dark-text;
+  text-transform: uppercase;
+}
+.tag-dark-invert {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 14px;
+  background-color: transparent;
+  color: $dark-text;
+  border: 1px solid $dark-text;
   text-transform: uppercase;
 }
 
@@ -112,6 +156,7 @@ $marginY: 25px;
 .topHeaderIcons {
   margin: 0 10px;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .header-border {
@@ -127,6 +172,7 @@ $marginY: 25px;
   margin: 0 35px;
   font-weight: 700;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .container {
